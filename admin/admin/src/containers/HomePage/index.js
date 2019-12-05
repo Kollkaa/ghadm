@@ -34,6 +34,7 @@ import world from "../../assets/images/dashboard/world-report.png";
 
 export class HomePage extends React.PureComponent {
   // eslint-disable-line react/prefer-stateless-function
+
   state = {
     startDate: new Date()
   };
@@ -47,21 +48,20 @@ export class HomePage extends React.PureComponent {
   render() {
     return (<div>
 
-
-      <span>
-      <img src={pages} />
-    <img src={hackers} />
-    <img src={users} />
-  </span>
         <DatePicker
           selected={this.state.startDate}
           onChange={this.handleChange}
         />
-
-  <a href="http://localhost:1337/admin"> <img src={chart} /></a>
-  <img src={active} />
-  <img src={world} />
+        <div>
+          <h1 style={
+            {textShadow: '0 0 10px rgba(0,0,0, .4)'}
+          }>
+            <li>Вітаємо Вас в панелі адміністратора</li>
+            <li> Генерального Штабу ЗСУ</li>
+          </h1>
+        </div>
     </div>
+
   );
   }
 }
